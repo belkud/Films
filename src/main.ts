@@ -53,12 +53,38 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
         
     },3000)
     
+
+    // function fn() {
+    //     let num = 0
+    //     setInterval(() => {
+    //        num++
+    //        nums.innerHTML = `${num}`
+     
+    //     }, 1000);
+     
+    //  }
+     
+    //  const score = document.querySelector('#score') as HTMLButtonElement
+    //  score.addEventListener('click', fn, { once: true })
+
+     
+     
     
     const restart = document.querySelector('#restart') as HTMLButtonElement
-    restart.style.rotate = 0+'deg'
+    let deg = 0
     restart.addEventListener ('click',()=> {
-        restart.style.rotate += 20+'deg'
+        deg+=360
 
-        // console.log(location.reload());
+
+        firstLine.style.rotate =`${deg + 'deg'}`
+        firstLine.style.transition = 3+'s'
+        secondLine.style.rotate =`${deg + 'deg'}`
+        secondLine.style.transition = 6+'s'
+        thirdLine.style.rotate =`${deg + 'deg'}`
+        thirdLine.style.transition = 9+'s'
+
+    console.log(deg);
+ 
         
     })
+    

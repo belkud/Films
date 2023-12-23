@@ -28,6 +28,11 @@ body {
   width: 150px;
   position: absolute;
   top: 50%;
-  background-color: rgb(120, 255, 255);
-
+  background: linear-gradient(45deg, black, rgb(120, 255, 255));
+  transition: 2s;
+  color: black;
+}
+#restart:active, #restart:hover {
+  color: white;
+  transition: 2s;
 }
