@@ -2,8 +2,14 @@ import './style.css'
 
 const firstLine = document.querySelector('#firstLine') as HTMLDivElement
     // (возможно пригодится для трех линий)
-    for (let i = 0; i < 10; i++) {
-    }
+    
+    // for (let i = 1; i < 2; i++) {
+    //     let lineMassive = [`${i*8}`, 1, 1]
+    //     console.log(lineMassive);
+    // }
+    
+    
+    
     
     setInterval(()=>{
         const number = Math.round(Math.random()*9)
@@ -13,8 +19,15 @@ const firstLine = document.querySelector('#firstLine') as HTMLDivElement
         console.log(firstLine.style.filter);
         console.log(number);
 
-        firstLine.style.backgroundColor = 'green'
-        // СОЗДАТЬ МАССИВ И В НЕМ ОТ 0 ДО 255 3 ОТДЕЛЬНЫХ ЧИСЛА
+
+        const number1 = Math.round(Math.random()*255)
+        const number2 = Math.round(Math.random()*255)
+        const number3 = Math.round(Math.random()*255)
+    console.log(number1);
+    console.log(number2);
+    console.log(number3);
+
+        firstLine.style.backgroundColor = `rgb(${number1}, ${number2}, ${number3})`
     },5000)
     
    
