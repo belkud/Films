@@ -1,24 +1,28 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
 
-// document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-//   <div>
-//     <a href="https://vitejs.dev" target="_blank">
-//       <img src="${viteLogo}" class="logo" alt="Vite logo" />
-//     </a>
-//     <a href="https://www.typescriptlang.org/" target="_blank">
-//       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-//     </a>
-//     <h1>Vite + TypeScript</h1>
-//     <div class="card">
-//       <button id="counter" type="button"></button>
-//     </div>
-//     <p class="read-the-docs">
-//       Click on the Vite and TypeScript logos to learn more
-//     </p>
-//   </div>
-// `
+const firstLine = document.querySelector('#firstLine') as HTMLDivElement
+// firstLine.addEventListener ('click', ()=>{
+    // (возможно пригодится для трех линий)
+    for (let i = 0; i < 10; i++) {
+    }
+    
+    setInterval(()=>{
+        const number = Math.round(Math.random()*9)
+        firstLine.style.transition = `${number+3+'s'}`
+        firstLine.style.transform = `translate(0px, ${number*100+'px'})`
+        firstLine.style.filter = `blur(${(Math.round(Math.random()*10+5))+'px'})`
+        console.log(firstLine.style.filter);
+        console.log(number);
+        
+    },5000)
+    // })
+    
+    console.log(Math.round(Math.random()*10+5));
 
-// setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+
+    const restart = document.querySelector('#restart') as HTMLButtonElement
+    restart.addEventListener ('click',()=> {
+        // console.log(location.reload());
+        console.log(Math.round(Math.random()));
+        
+    })
