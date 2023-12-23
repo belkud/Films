@@ -27,6 +27,7 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
         secondLine.style.transform = `translate(0px, ${line2*100+'px'})`
         secondLine.style.filter = `blur(${(Math.round(Math.random()*20+5))+'px'})`
         
+        
         // прокрутка третьей полосы
         const line3 = Math.round(Math.random()*9)
         thirdLine.style.transition = `${line3+1+'s'}`
@@ -54,8 +55,10 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     
     
     const restart = document.querySelector('#restart') as HTMLButtonElement
+    restart.style.rotate = 0+'deg'
     restart.addEventListener ('click',()=> {
+        restart.style.rotate += 20+'deg'
+
         // console.log(location.reload());
-        firstLine.style.transition = .5+'s'
         
     })

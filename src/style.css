@@ -4,7 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
-  background-color: lightgray;
+  background-color: black;
   overflow-y:scroll;
   position: static;
   height: 100vh;
