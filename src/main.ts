@@ -15,7 +15,7 @@ const firstLine = document.querySelector('#firstLine') as HTMLDivElement
         const number = Math.round(Math.random()*9)
         firstLine.style.transition = `${number+3+'s'}`
         firstLine.style.transform = `translate(0px, ${number*100+'px'})`
-        firstLine.style.filter = `blur(${(Math.round(Math.random()*10+5))+'px'})`
+        firstLine.style.filter = `blur(${(Math.round(Math.random()*20+5))+'px'})`
         console.log(firstLine.style.filter);
         console.log(number);
 
