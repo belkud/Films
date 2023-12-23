@@ -1,7 +1,6 @@
 import './style.css'
 
 const firstLine = document.querySelector('#firstLine') as HTMLDivElement
-// firstLine.addEventListener ('click', ()=>{
     // (возможно пригодится для трех линий)
     for (let i = 0; i < 10; i++) {
     }
@@ -13,16 +12,15 @@ const firstLine = document.querySelector('#firstLine') as HTMLDivElement
         firstLine.style.filter = `blur(${(Math.round(Math.random()*10+5))+'px'})`
         console.log(firstLine.style.filter);
         console.log(number);
-        
+
+        firstLine.style.backgroundColor = 'green'
+        // СОЗДАТЬ МАССИВ И В НЕМ ОТ 0 ДО 255 3 ОТДЕЛЬНЫХ ЧИСЛА
     },5000)
-    // })
     
-    console.log(Math.round(Math.random()*10+5));
+   
 
 
     const restart = document.querySelector('#restart') as HTMLButtonElement
     restart.addEventListener ('click',()=> {
-        // console.log(location.reload());
-        console.log(Math.round(Math.random()));
-        
+        console.log(location.reload());
     })
