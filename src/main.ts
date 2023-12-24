@@ -33,10 +33,6 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
         thirdLine.style.transition = `${line3+1+'s'}`
         thirdLine.style.transform = `translate(0px, ${line3*100+'px'})`
         thirdLine.style.filter = `blur(${(Math.round(Math.random()*20+5))+'px'})`
-        
-        // console.log(line1);
-        // console.log(line2);
-        // console.log(line3);
 
         // изменение цветов всех трех полос
         const numColor1 = Math.round(Math.random()*255)
@@ -67,24 +63,84 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     //  const score = document.querySelector('#score') as HTMLButtonElement
     //  score.addEventListener('click', fn, { once: true })
 
-     
-     
-    
-    const restart = document.querySelector('#restart') as HTMLButtonElement
-    let deg = 0
+     setInterval(() => {
+         deg+=360
+        //  firstLine.style.rotate =`${deg + 'deg'}`
+        //  firstLine.style.transition = 3+'s'
+         secondLine.style.rotate =`${deg + 'deg'}`
+         secondLine.style.transition = 6+'s'
+        //  thirdLine.style.rotate =`${deg + 'deg'}`
+        //  thirdLine.style.transition = 9+'s'
+        }, 9000);
+        
+        
+        const restart = document.querySelector('#restart') as HTMLButtonElement
+        let deg = 0
     restart.addEventListener ('click',()=> {
         deg+=360
-
-
-        firstLine.style.rotate =`${deg + 'deg'}`
-        firstLine.style.transition = 3+'s'
-        secondLine.style.rotate =`${deg + 'deg'}`
-        secondLine.style.transition = 6+'s'
-        thirdLine.style.rotate =`${deg + 'deg'}`
-        thirdLine.style.transition = 9+'s'
-
-    console.log(deg);
- 
+   
+    })
+    const aliveEmblem = document.querySelector('#aliveEmblem') as HTMLImageElement
+    aliveEmblem.addEventListener('click', ()=> {
+        aliveEmblem.style.filter = `
+        blur(${10 + 'px'})
+        `
+        
+        setTimeout(() => {
+           aliveEmblem.style.transition = 5 + 's' 
+           aliveEmblem.style.rotate = 360 + 'deg' 
+    }, 3000);
+        
+        
+       
         
     })
     
+
+    const api = ('https://www.ozon.ru/category/smartfony-15502/')
+    console.log(api);
+    
+    // const api2 = ('https://avatars.githubusercontent.com/u/126806058?v=4')
+
+    const telephones = document.querySelector('#telephones') as HTMLDivElement
+    
+    async function mobile() {
+        const response = await fetch('https://api.github.com/users/belkud')
+        const myPage = await response.json()
+        
+        console.log(myPage);
+        console.log(myPage.avatar_url);
+        telephones.innerHTML = `
+        <h3>${myPage.avatar_url}</h3>
+        <img id="avatar" src="https://avatars.githubusercontent.com/u/126806058?v=4 " alt="" srcset="">
+        <div>123</div>
+        `
+        
+    }
+    mobile()
+    
+    
+    
+    
+
+    async function todos(){
+        const response = await fetch ('https://jsonplaceholder.typicode.com/users')
+        
+        const json = await response.json() 
+         //! try catch - проверка на ошибки (НЕТУ ДАЛЬНЕЙШЕЙ ОСТАНОВКИ ДРУГИХ КОДОВ)
+        try {
+            
+            //!    проверка пришёл или нет ответ с сервера
+         if (response.ok) {
+             console.log(response.status);        
+         } else {
+             console.log(response.status);        
+         }
+ 
+     } catch (error) {
+         console.log('ошибка ' + error.message);
+         
+     }
+    }
+
+    todos()
