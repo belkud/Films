@@ -89,6 +89,8 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     
     const starSky = document.querySelector('#starSky') as HTMLDivElement
     // const stars = document.querySelector('#stars') as HTMLDivElement
+
+
     setInterval(()=> {
 
         for (let i = 0; i < starSky.children.length; i++) {

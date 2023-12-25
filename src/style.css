@@ -65,7 +65,9 @@ body {
 #aliveEmblem {
   position: absolute;
   width: 150px;
-  
+  top: calc(50% - 75px);
+  left: calc(50% - 75px);
+
   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! СНЯТЬ */
   opacity: 1;
   filter:brightness(0)
@@ -76,7 +78,7 @@ body {
 
 
 
-
+/*! летящие шарики */
  #starSky {
   width: 100%;
   height: 100vh;
