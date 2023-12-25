@@ -91,21 +91,12 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     })
     
 
-// setInterval(() => {
+
     
     setTimeout(() => {
        aliveEmblem.style.transition = 1 + 's' 
        aliveEmblem.style.opacity = '1' 
     })
-
-
-// setTimeout(() => {
-//     aliveEmblem.style.filter = `
-//     brightness(1)
-//     blur(5px)
-//     `
-// }, 1500);
-
     setTimeout(() => {
        aliveEmblem.style.transition = 1 + 's' 
        aliveEmblem.style.scale = '1.1'
@@ -137,16 +128,46 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
 setTimeout(() => {
     aliveEmblem.style.transition = 1 + 's' 
     aliveEmblem.style.opacity = '0' 
-    aliveEmblem.style.filter = `
-    brightness(0)
-    blur(5px)
-    dropShadow(0px 0px 5px aliceblue)
-    `
 }, 13500);
 
-
-
-// }, 3500);
+setInterval(() => {
+    setTimeout(() => {
+        aliveEmblem.style.transition = 1 + 's' 
+        aliveEmblem.style.opacity = '1' 
+     })
+     setTimeout(() => {
+        aliveEmblem.style.transition = 1 + 's' 
+        aliveEmblem.style.scale = '1.1'
+ }, 1500);
+     setTimeout(() => {
+        aliveEmblem.style.transition = 1 + 's' 
+        aliveEmblem.style.scale = '1'
+ }, 2500);
+     setTimeout(() => {
+        aliveEmblem.style.transition = 1 + 's' 
+        aliveEmblem.style.scale = '1.1'
+ }, 3500);
+     setTimeout(() => {
+        aliveEmblem.style.transition = 1 + 's' 
+        aliveEmblem.style.scale = '1'
+ }, 4500);
+     setTimeout(() => {
+        aliveEmblem.style.transition = 1 + 's' 
+        aliveEmblem.style.scale = '1.1'
+ }, 5500);
+     setTimeout(() => {
+        aliveEmblem.style.transition = 1 + 's' 
+        aliveEmblem.style.scale = '1'
+ }, 6500);
+     setTimeout(() => {
+        aliveEmblem.style.transition = 6 + 's' 
+        aliveEmblem.style.rotate = 360 + 'deg' 
+ }, 7500);
+ setTimeout(() => {
+     aliveEmblem.style.transition = 1 + 's' 
+     aliveEmblem.style.opacity = '0' 
+ }, 13500);
+}, 15000);
 
 
 
