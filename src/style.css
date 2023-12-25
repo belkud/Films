@@ -24,7 +24,7 @@ body {
   height: 20px;
 
   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! СНЯТЬ */
-  background-color: transparent !important;
+  /* background-color: transparent; */
   top: 0;
   filter: blur(5px);
 
@@ -65,11 +65,9 @@ body {
 #aliveEmblem {
   position: absolute;
   width: 150px;
-  /* top: 0%; */
-  /* left: 0%; */
   
   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! СНЯТЬ */
-  opacity: 0 !important;
+  opacity: 1;
   filter:brightness(0)
   blur(3px)
   drop-shadow(0px 0px 5px aliceblue);

@@ -103,13 +103,13 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
           
             setTimeout(()=> {
                 starSky.children[i].style.opacity = '1'
-                starSky.children[i].style.transition = .5+'s'
+                starSky.children[i].style.transition = 1+'s'
             },0)
             setTimeout(()=> {
                 starSky.children[i].style.opacity = '0'
-                starSky.children[i].style.transition = .5+'s'
+                starSky.children[i].style.transition = 1+'s'
                 
-            },500)
+            },1000)
 
         }
     }, 5000)
