@@ -85,17 +85,57 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
         aliveEmblem.style.filter = `
         blur(${10 + 'px'})
         `
-        
-        setTimeout(() => {
-           aliveEmblem.style.transition = 5 + 's' 
-           aliveEmblem.style.rotate = 360 + 'deg' 
-    }, 3000);
-        
-        
        
+        
         
     })
     
+
+
+    setTimeout(() => {
+       aliveEmblem.style.transition = 1 + 's' 
+       aliveEmblem.style.opacity = '1' 
+}, 500);
+    setTimeout(() => {
+       aliveEmblem.style.transition = 1 + 's' 
+       aliveEmblem.style.filter = `
+        //  blur(${2 + 'px'})
+        ` 
+}, 500);
+
+    setTimeout(() => {
+       aliveEmblem.style.transition = 1 + 's' 
+       aliveEmblem.style.scale = '1.1'
+}, 1500);
+    setTimeout(() => {
+       aliveEmblem.style.transition = 1 + 's' 
+       aliveEmblem.style.scale = '1'
+}, 2500);
+    setTimeout(() => {
+       aliveEmblem.style.transition = 1 + 's' 
+       aliveEmblem.style.scale = '1.1'
+}, 3500);
+    setTimeout(() => {
+       aliveEmblem.style.transition = 1 + 's' 
+       aliveEmblem.style.scale = '1'
+}, 4500);
+    setTimeout(() => {
+       aliveEmblem.style.transition = 1 + 's' 
+       aliveEmblem.style.scale = '1.1'
+}, 5500);
+    setTimeout(() => {
+       aliveEmblem.style.transition = 1 + 's' 
+       aliveEmblem.style.scale = '1'
+}, 6500);
+    setTimeout(() => {
+       aliveEmblem.style.transition = 6 + 's' 
+       aliveEmblem.style.rotate = 360 + 'deg' 
+}, 7500);
+
+
+
+
+
 
     const api = ('https://www.ozon.ru/category/smartfony-15502/')
     console.log(api);
