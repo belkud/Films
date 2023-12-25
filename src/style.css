@@ -11,25 +11,31 @@ body {
   overflow: hidden; /*! возможно удалить для прокрутки фильмов!!! */
 }
 
+#firstPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 #firstLine, #secondLine, #thirdline {
   position: absolute;
   width: 100%;
   height: 20px;
-  /* background-color: greenyellow; */
+
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! СНЯТЬ */
+  background-color: transparent !important;
   top: 0;
   filter: blur(5px);
 
 }
 
-#secondLine {
- 
-  /* transform-origin: 0% -80% !important; */
-  /* transform-origin: 50% -230% !important; */
-}
 
 
 
-#restart {
+
+
+/* #restart {
   width: 160px;
   padding: 5px;
   opacity: .5;
@@ -39,11 +45,11 @@ body {
   transition: 5s;
   color: black;
   font-size: 1.1em;
-}
-#restart:active, #restart:hover {
+} */
+/* #restart:active, #restart:hover {
   color: white;
   transition: 5s;
-}
+} */
 
 #telephones {
   color: aliceblue;
@@ -57,15 +63,32 @@ body {
 
 
 #aliveEmblem {
-  position: relative;
+  position: absolute;
   width: 150px;
-  top: 0%;
-  opacity: 0;
-  left: 10%;
+  /* top: 0%; */
+  /* left: 0%; */
+  
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! СНЯТЬ */
+  opacity: 0 !important;
   filter:brightness(0)
   blur(3px)
   drop-shadow(0px 0px 5px aliceblue);
    
 }
 
- 
+ #starSky {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  color: aliceblue;
+ }
+ #starSky>div {
+  width: 10px;
+  height: 10px;
+  background-color: lavender;
+  border-radius: 50%;
+  position: absolute;
+  color: aliceblue;
+  box-shadow: 0px 0px 5px aliceblue;
+  opacity: .5;
+ }

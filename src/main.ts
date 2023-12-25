@@ -63,6 +63,7 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     //  const score = document.querySelector('#score') as HTMLButtonElement
     //  score.addEventListener('click', fn, { once: true })
 
+        let deg = 0
      setInterval(() => {
          deg+=360
         //  firstLine.style.rotate =`${deg + 'deg'}`
@@ -74,22 +75,59 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
         }, 9000);
         
         
-        const restart = document.querySelector('#restart') as HTMLButtonElement
-        let deg = 0
-    restart.addEventListener ('click',()=> {
-        deg+=360
+    //     const restart = document.querySelector('#restart') as HTMLButtonElement
+    // restart.addEventListener ('click',()=> {
+    //     deg+=360
    
-    })
+    // })
+
+
     const aliveEmblem = document.querySelector('#aliveEmblem') as HTMLImageElement
-    aliveEmblem.addEventListener('click', ()=> {
-        aliveEmblem.style.filter = `
-        blur(${10 + 'px'})
-        `
-       
+    // aliveEmblem.addEventListener('click', ()=> {
         
-        
-    })
+    // })
     
+    const starSky = document.querySelector('#starSky') as HTMLDivElement
+    // const stars = document.querySelector('#stars') as HTMLDivElement
+    setInterval(()=> {
+
+        for (let i = 0; i < starSky.children.length; i++) {
+            
+            let top = Math.round(Math.random()*100)
+            let left = Math.round(Math.random()*100)
+            
+            let child= starSky.children[i]
+            
+            child.style.left = `${left + '%'}`
+            child.style.top = `${top + '%'}`            
+          
+            setTimeout(()=> {
+                starSky.children[i].style.opacity = '1'
+                starSky.children[i].style.transition = .5+'s'
+            },0)
+            setTimeout(()=> {
+                starSky.children[i].style.opacity = '0'
+                starSky.children[i].style.transition = .5+'s'
+                
+            },500)
+
+        }
+    }, 5000)
+        
+        
+    setInterval(()=> {
+        }, 500)
+
+
+        
+    
+        
+
+
+    
+    console.log(Math.round(Math.random()*100));
+
+
 
 
     
@@ -129,6 +167,10 @@ setTimeout(() => {
     aliveEmblem.style.transition = 1 + 's' 
     aliveEmblem.style.opacity = '0' 
 }, 13500);
+
+
+
+
 
 setInterval(() => {
     setTimeout(() => {
