@@ -93,33 +93,68 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
         }
     }, 5000)
     
+    
+    const starSky2 = document.querySelector('#starSky2') as HTMLDivElement
+    setInterval(()=> {
+        for (let i = 0; i < starSky2.children.length; i++) {
+            
+            let top = Math.round(Math.random()*100)
+            let left = Math.round(Math.random()*100)
+            
+            let child= starSky2.children[i]
+            
+            child.style.left = `${left + '%'}`
+            child.style.top = `${top + '%'}`            
+            
+            let rotate = child.style.rotate
+            child.style.rotate = `${180 + 'deg'}`
 
-   
+              
+            
+console.log(rotate);
 
-
+                      
+            starSky2.children[i].style.display = 'block'
+            
+            setTimeout(()=> {
+                starSky2.children[i].style.opacity = '1'
+                starSky2.children[i].style.transition = 2+'s'
+            },0)
+            setTimeout(()=> {
+                starSky2.children[i].style.opacity = '0'
+                starSky2.children[i].style.transition = 2+'s'
+            },2000)
+        }
+    }, 5000)
+    
+    
     //! смена темы шариков
     const menu = document.querySelector('#menu') as HTMLDivElement
     const bubbles = document.querySelector('#bubbles') as HTMLDivElement
     const snowballs = document.querySelector('#snowballs') as HTMLDivElement
     const fireballs = document.querySelector('#fireballs') as HTMLDivElement
-    // const menu = document.querySelector('#menu') as HTMLUListElement
-    // const bubbles = document.querySelector('#bubbles') as HTMLUListElement
-    // const snowballs = document.querySelector('#snowballs') as HTMLLIElement
-    // const fireballs = document.querySelector('#fireballs') as HTMLLIElement
+ 
 
     bubbles.addEventListener ('click', ()=> {
         for (let i = 0; i < starSky.children.length; i++) {
         starSky.children[i].style.backgroundColor = 'transparent'
+        starSky2.style.display = 'none'
+        starSky.style.display = 'block'
         }
     })
     snowballs.addEventListener ('click', ()=> {
         for (let i = 0; i < starSky.children.length; i++) {
         starSky.children[i].style.backgroundColor = 'aliceblue'
+        starSky2.style.display = 'none'
+        starSky.style.display = 'block'
         }
     })
+
     fireballs.addEventListener ('click', ()=> {
-        for (let i = 0; i < starSky.children.length; i++) {
-        starSky.children[i].style.backgroundColor = 'yellow'
+        for (let i = 0; i < starSky2.children.length; i++) {
+        // starSky2.children[i].innerHTML = `${i}`
+        starSky2.style.display = 'block'
+        starSky.style.display = 'none'
         }
     })
     
