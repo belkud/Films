@@ -95,16 +95,6 @@ body {
   width: 120px;
   z-index: 2;
 }
-
- 
-
-/* !!!!!!!!!!!!! */
- /* #menu {
-  display: flex;
-  color: aliceblue;
-  position: relative;
-  border: 1px solid aliceblue;
-} */
  
 #menu li   {
   list-style: none;
