@@ -109,7 +109,7 @@ body {
  
 #menu li   {
   list-style: none;
-  width: 160px;
+  width: 150px;
   text-decoration: none;
   cursor: pointer;
   padding: 5px;
@@ -126,5 +126,5 @@ body {
 
 #menu li ul li:hover{
   background-color: rgb(211, 211, 211, .3);
-  width: 140px;
+  /* width: 140px; */
 }
