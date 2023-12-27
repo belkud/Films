@@ -19,12 +19,12 @@ body {
 }
 
 #firstLine, #secondLine, #thirdline {
-  position: absolute;
   width: 100%;
   height: 20px;
-
+  position: absolute;
+  
   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! СНЯТЬ */
-  /* background-color: transparent; */
+  background-color: transparent !important;
   top: 0;
   filter: blur(5px);
 
@@ -62,6 +62,7 @@ body {
 }
 
 
+/*! Логотип Windows */
 #aliveEmblem {
   position: absolute;
   width: 150px;
@@ -69,7 +70,7 @@ body {
   left: calc(50% - 75px);
 
   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! СНЯТЬ */
-  opacity: 1;
+  opacity: 0 !important;
   filter:brightness(0)
   blur(3px)
   drop-shadow(0px 0px 5px aliceblue);
@@ -78,20 +79,71 @@ body {
 
 
 
-/*! летящие шарики */
+/*! Двигающиеся шарики по экрану*/
  #starSky {
   width: 100%;
   height: 100vh;
   position: absolute;
-  color: aliceblue;
- }
- #starSky>div {
+}
+#starSky>div {
   width: 10px;
   height: 10px;
-  background-color: lavender;
+  /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! СНЯТЬ */
+  /* background-color: aliceblue; */
+  box-shadow: 0px 0px 5px aliceblue;
+  
   border-radius: 50%;
   position: absolute;
   color: aliceblue;
-  box-shadow: 0px 0px 5px aliceblue;
   opacity: .5;
+  display: none;
  }
+
+
+
+
+ #menu {
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+  position: relative;
+  border: 1px solid aliceblue;
+}
+
+
+
+/* !!!!!!!!!!!!! */
+ /* #menu {
+  display: flex;
+  color: aliceblue;
+  position: relative;
+  border: 1px solid aliceblue;
+} */
+ 
+/* #menu li   {
+  background-color: rgb(211, 211, 211, .5);
+  position: relative;
+  list-style: none;
+  width: 160px;
+  text-decoration: none;
+  border: 1px solid aqua;
+  
+} */
+
+/* #menu li:hover {
+  background-color: rgba(224, 20, 20, 0.5);
+  left: 100%;
+  top: 0;
+  display: none;
+} */
+/* #menu ul {
+  position: absolute;
+  left: -25.5%;
+  top: 100%;
+  display: none;
+} */
+
+
+/* #menu ul:hover {
+  display: inline-block;
+} */

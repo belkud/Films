@@ -1,17 +1,12 @@
 import './style.css'
 
+
+
+  //! Движение полос по экрану
 const firstLine = document.querySelector('#firstLine') as HTMLDivElement
 const secondLine = document.querySelector('#secondLine') as HTMLDivElement
 const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
-    // (возможно пригодится для трех линий)
-    
-    // for (let i = 1; i < 2; i++) {
-    //     let lineMassive = [`${i*8}`, 1, 1]
-    //     console.log(lineMassive);
-    // }
-    
-    
-    
+
     
     setInterval(()=>{
         
@@ -44,27 +39,12 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
         secondLine.style.backgroundColor = `rgb(${numColor2}, ${numColor1}, ${numColor3})`
         thirdLine.style.backgroundColor = `rgb(${numColor3}, ${numColor2}, ${numColor1})`
     
-    
-        
-        
     },3000)
     
 
-    // function fn() {
-    //     let num = 0
-    //     setInterval(() => {
-    //        num++
-    //        nums.innerHTML = `${num}`
-     
-    //     }, 1000);
-     
-    //  }
-     
-    //  const score = document.querySelector('#score') as HTMLButtonElement
-    //  score.addEventListener('click', fn, { once: true })
 
         let deg = 0
-     setInterval(() => {
+             setInterval(() => {
          deg+=360
         //  firstLine.style.rotate =`${deg + 'deg'}`
         //  firstLine.style.transition = 3+'s'
@@ -82,17 +62,19 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     // })
 
 
-    const aliveEmblem = document.querySelector('#aliveEmblem') as HTMLImageElement
-    // aliveEmblem.addEventListener('click', ()=> {
-        
-    // })
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //! Двигающиеся шарики по экрану
     
     const starSky = document.querySelector('#starSky') as HTMLDivElement
-    // const stars = document.querySelector('#stars') as HTMLDivElement
-
-
     setInterval(()=> {
-
         for (let i = 0; i < starSky.children.length; i++) {
             
             let top = Math.round(Math.random()*100)
@@ -102,7 +84,8 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
             
             child.style.left = `${left + '%'}`
             child.style.top = `${top + '%'}`            
-          
+            starSky.children[i].style.display = 'block'
+            
             setTimeout(()=> {
                 starSky.children[i].style.opacity = '1'
                 starSky.children[i].style.transition = 2+'s'
@@ -110,37 +93,44 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
             setTimeout(()=> {
                 starSky.children[i].style.opacity = '0'
                 starSky.children[i].style.transition = 2+'s'
-                
             },2000)
-
         }
     }, 5000)
-        
-        
-    setInterval(()=> {
-        }, 500)
-
-
-        
     
-        
+
+   
 
 
+    // смена темы шариков
+    const menu = document.querySelector('#menu') as HTMLDivElement
+    const bubbles = document.querySelector('#bubbles') as HTMLDivElement
+    const snowballs = document.querySelector('#snowballs') as HTMLDivElement
+    const fireballs = document.querySelector('#fireballs') as HTMLDivElement
+    // const menu = document.querySelector('#menu') as HTMLUListElement
+    // const bubbles = document.querySelector('#bubbles') as HTMLUListElement
+    // const snowballs = document.querySelector('#snowballs') as HTMLLIElement
+    // const fireballs = document.querySelector('#fireballs') as HTMLLIElement
+
+    menu.addEventListener ('click', ()=> {
+        console.log(123);
+        menu.style.backgroundColor = 'red'
     
-    console.log(Math.round(Math.random()*100));
-
-
-
-
+    // console.log(bubbles.innerHTML='234');
+    
+    })
+    
+    
+    //! Логотип Windows
+    const aliveEmblem = document.querySelector('#aliveEmblem') as HTMLImageElement
     
     setTimeout(() => {
-       aliveEmblem.style.transition = 1 + 's' 
-       aliveEmblem.style.opacity = '1' 
+        aliveEmblem.style.transition = 1 + 's' 
+        aliveEmblem.style.opacity = '1' 
     })
     setTimeout(() => {
-       aliveEmblem.style.transition = 1 + 's' 
-       aliveEmblem.style.scale = '1.1'
-}, 1500);
+        aliveEmblem.style.transition = 1 + 's' 
+        aliveEmblem.style.scale = '1.1'
+    }, 1500);
     setTimeout(() => {
        aliveEmblem.style.transition = 1 + 's' 
        aliveEmblem.style.scale = '1'
@@ -169,8 +159,6 @@ setTimeout(() => {
     aliveEmblem.style.transition = 1 + 's' 
     aliveEmblem.style.opacity = '0' 
 }, 13500);
-
-
 
 
 
@@ -215,14 +203,7 @@ setInterval(() => {
 
 
 
-
-
-
-
-// filter:brightness(0)
-//   blur(5px)
-//   drop-shadow(0px 0px 5px aliceblue);
-
+ 
 
 
 
@@ -239,23 +220,31 @@ setInterval(() => {
 
     const telephones = document.querySelector('#telephones') as HTMLDivElement
     
+
+
+
     async function mobile() {
         const response = await fetch('https://api.github.com/users/belkud')
         const myPage = await response.json()
         
         console.log(myPage);
-        console.log(myPage.avatar_url);
         telephones.innerHTML = `
-        <h3>${myPage.avatar_url}</h3>
+        <h3>Мой логин в Гитхаб: ${myPage.login}</h3>
         <img id="avatar" src="https://avatars.githubusercontent.com/u/126806058?v=4 " alt="" srcset="">
-        <div>123</div>
+        <div>${myPage.gists_url}</div>
         `
         
     }
     mobile()
     
     
-    
+    const square = document.querySelector ('#square') as HTMLDivElement
+    square.addEventListener ('click', ()=> {
+        console.log(square.style.color = 'aliceblue');
+        square.style.color = 'aliceblue'
+        
+        
+    })
     
 
     async function todos(){
@@ -279,3 +268,5 @@ setInterval(() => {
     }
 
     todos()
+
+
