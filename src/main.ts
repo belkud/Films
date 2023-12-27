@@ -97,7 +97,7 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
    
 
 
-    // смена темы шариков
+    //! смена темы шариков
     const menu = document.querySelector('#menu') as HTMLDivElement
     const bubbles = document.querySelector('#bubbles') as HTMLDivElement
     const snowballs = document.querySelector('#snowballs') as HTMLDivElement
@@ -108,10 +108,19 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     // const fireballs = document.querySelector('#fireballs') as HTMLLIElement
 
     bubbles.addEventListener ('click', ()=> {
-        console.log(123);
-    
-   
-    
+        for (let i = 0; i < starSky.children.length; i++) {
+        starSky.children[i].style.backgroundColor = 'transparent'
+        }
+    })
+    snowballs.addEventListener ('click', ()=> {
+        for (let i = 0; i < starSky.children.length; i++) {
+        starSky.children[i].style.backgroundColor = 'aliceblue'
+        }
+    })
+    fireballs.addEventListener ('click', ()=> {
+        for (let i = 0; i < starSky.children.length; i++) {
+        starSky.children[i].style.backgroundColor = 'yellow'
+        }
     })
     
     
