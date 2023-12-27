@@ -47,20 +47,15 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
         let deg = 0
              setInterval(() => {
          deg+=360
-        //  firstLine.style.rotate =`${deg + 'deg'}`
-        //  firstLine.style.transition = 3+'s'
+         firstLine.style.rotate =`${deg + 'deg'}`
+         firstLine.style.transition = 3+'s'
          secondLine.style.rotate =`${deg + 'deg'}`
          secondLine.style.transition = 6+'s'
-        //  thirdLine.style.rotate =`${deg + 'deg'}`
-        //  thirdLine.style.transition = 9+'s'
-        }, 9000);
+         thirdLine.style.rotate =`${deg + 'deg'}`
+         thirdLine.style.transition = 9+'s'
+        }, 12000);
         
-        
-    //     const restart = document.querySelector('#restart') as HTMLButtonElement
-    // restart.addEventListener ('click',()=> {
-    //     deg+=360
    
-    // })
 
 
     
@@ -112,11 +107,10 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     // const snowballs = document.querySelector('#snowballs') as HTMLLIElement
     // const fireballs = document.querySelector('#fireballs') as HTMLLIElement
 
-    menu.addEventListener ('click', ()=> {
+    bubbles.addEventListener ('click', ()=> {
         console.log(123);
-        menu.style.backgroundColor = 'red'
     
-    // console.log(bubbles.innerHTML='234');
+   
     
     })
     
