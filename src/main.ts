@@ -1,6 +1,13 @@
 import './style.css'
 
+    //!!!!!!!! Посмотреть
+    const square = document.querySelector ('#square') as HTMLDivElement
+    square.addEventListener ('click', ()=> {
+        square.style.color = 'aliceblue'
+        console.log(square.style.color = 'aliceblue');    
+    })
 
+    
 
   //! Движение полос по экрану
 const firstLine = document.querySelector('#firstLine') as HTMLDivElement
@@ -65,7 +72,7 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     
     
     
-    
+        
     
     
     
@@ -122,7 +129,9 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     
     //! Логотип Windows
     const aliveEmblem = document.querySelector('#aliveEmblem') as HTMLImageElement
-    
+     
+
+
     setTimeout(() => {
         aliveEmblem.style.transition = 1 + 's' 
         aliveEmblem.style.opacity = '1' 
@@ -218,8 +227,9 @@ setInterval(() => {
     
     // const api2 = ('https://avatars.githubusercontent.com/u/126806058?v=4')
 
-    const telephones = document.querySelector('#telephones') as HTMLDivElement
+    const github = document.querySelector('#github') as HTMLDivElement
     
+
 
 
 
@@ -228,7 +238,7 @@ setInterval(() => {
         const myPage = await response.json()
         
         console.log(myPage);
-        telephones.innerHTML = `
+        github.innerHTML = `
         <h3>Мой логин в Гитхаб: ${myPage.login}</h3>
         <img id="avatar" src="https://avatars.githubusercontent.com/u/126806058?v=4 " alt="" srcset="">
         <div>${myPage.gists_url}</div>
@@ -237,14 +247,7 @@ setInterval(() => {
     }
     mobile()
     
-    
-    const square = document.querySelector ('#square') as HTMLDivElement
-    square.addEventListener ('click', ()=> {
-        console.log(square.style.color = 'aliceblue');
-        square.style.color = 'aliceblue'
-        
-        
-    })
+   
     
 
     async function todos(){
