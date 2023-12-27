@@ -24,7 +24,7 @@ body {
   position: absolute;
   
   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! СНЯТЬ */
-  background-color: transparent !important;
+  /* background-color: transparent !important; */
   top: 0;
   filter: blur(5px);
 
@@ -54,7 +54,7 @@ body {
 #github {
   color: aliceblue;
   margin: 50px;
-  border: 1px solid rgb(86, 100, 112);
+  /* border: 1px solid rgb(86, 100, 112); */
 }
 
 #avatar {
@@ -70,7 +70,7 @@ body {
   left: calc(50% - 75px);
 
   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! СНЯТЬ */
-  opacity: 0 !important;
+  /* opacity: 0 !important; */
   filter:brightness(0)
   blur(3px)
   drop-shadow(0px 0px 5px aliceblue);
@@ -84,12 +84,13 @@ body {
   width: 100%;
   height: 100vh;
   position: absolute;
+  z-index: -1;
 }
 #starSky>div {
   width: 10px;
   height: 10px;
   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! СНЯТЬ */
-  /* background-color: aliceblue; */
+  background-color: aliceblue;
   box-shadow: 0px 0px 5px aliceblue;
   
   border-radius: 50%;
@@ -108,6 +109,7 @@ body {
   color: aliceblue;
   position: relative;
   border: 1px solid aliceblue;
+  width: 120px;
 }
 
  
@@ -120,28 +122,18 @@ body {
   border: 1px solid aliceblue;
 } */
  
-/* #menu li   {
-  background-color: rgb(211, 211, 211, .5);
-  position: relative;
+#menu li   {
   list-style: none;
   width: 160px;
   text-decoration: none;
-  border: 1px solid aqua;
-  
-} */
+}
 
-/* #menu li:hover {
-  background-color: rgba(224, 20, 20, 0.5);
-  left: 100%;
-  top: 0;
-  display: none;
-} */
-/* #menu ul {
-  position: absolute;
-  left: -25.5%;
-  top: 100%;
-  display: none;
-} */
+#menu>li:hover ul {
+  display: block;
+}
+#menu ul {
+  display: none; 
+} 
 
 
 /* #menu ul:hover {
