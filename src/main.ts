@@ -1,12 +1,6 @@
 import './style.css'
 
-    //!!!!!!!! Посмотреть
-    const square = document.querySelector ('#square') as HTMLDivElement
-    square.addEventListener ('click', ()=> {
-        square.style.color = 'aliceblue'
-        console.log(square.style.color = 'aliceblue');    
-    })
-
+ 
     
 
   //! Движение полос по экрану
