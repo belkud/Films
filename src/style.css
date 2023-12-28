@@ -100,6 +100,7 @@ body {
   position: absolute;
   color: aqua;
   display: block;
+  /* border: 1px solid red; */
   min-width: 100px !important;
  
 }
@@ -184,6 +185,8 @@ body {
     font-size: .8em;
   }
 
-
+  #menu {
+    font-size: .9em;
+  }
 
 }
