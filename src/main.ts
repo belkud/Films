@@ -49,8 +49,8 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
          deg+=360
         //  firstLine.style.rotate =`${deg + 'deg'}`
         //  firstLine.style.transition = 3+'s'
-        //  secondLine.style.rotate =`${deg + 'deg'}`
-        //  secondLine.style.transition = 6+'s'
+         secondLine.style.rotate =`${deg + 'deg'}`
+         secondLine.style.transition = 6+'s'
         //  thirdLine.style.rotate =`${deg + 'deg'}`
         //  thirdLine.style.transition = 9+'s'
         }, 12000);
