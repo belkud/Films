@@ -92,8 +92,8 @@ body {
 #starSky2>div {
   position: absolute;
   display: none;
-  backface-visibility: hidden;
-  will-change:auto;
+  /* backface-visibility: hidden;
+  will-change:auto; */
 }
 
 
