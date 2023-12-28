@@ -4,7 +4,7 @@ import './style.css'
     
 
   //! Движение полос по экрану
-const firstLine = document.querySelector('#firstLine') as HTMLDivElement
+const firstLine = document.querySelector('#firstLine') as HTMLElement
 const secondLine = document.querySelector('#secondLine') as HTMLDivElement
 const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
 
@@ -13,7 +13,7 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
         
         // прокрутка первой полосы
         const line1 = Math.round(Math.random()*9)
-        firstLine.style.transition = `${line1+1+'s'}`
+        firstLine.style.transition = `${line1+'s'}`
         firstLine.style.transform = `translate(0px, ${line1*100+'px'})`
         firstLine.style.filter = `blur(${(Math.round(Math.random()*20+5))+'px'})`
         
@@ -65,11 +65,19 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     
     
     
-    
-    
-    //! Двигающиеся шарики по экрану
-    
-    const starSky = document.querySelector('#starSky') as HTMLDivElement
+        
+        
+        //! Двигающиеся шарики по экрану
+        
+        const starSky = document.querySelector('#starSky') as HTMLDivElement
+        
+
+
+
+
+
+
+
     setInterval(()=> {
         for (let i = 0; i < starSky.children.length; i++) {
             
@@ -79,8 +87,10 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
             let child= starSky.children[i]
             
             child.style.left = `${left + '%'}`
-            child.style.top = `${top + '%'}`            
+            child.style.top = `${top + '%'}`    
+
             starSky.children[i].style.display = 'block'
+           
             
             setTimeout(()=> {
                 starSky.children[i].style.opacity = '1'
@@ -94,6 +104,17 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     }, 5000)
     
     
+
+
+
+
+ 
+
+//! starSky2 - огненные шары, starSky3 - вычисленние координат
+   const starSky3 = document.querySelector('#starSky3') as HTMLDivElement
+   const objectsCoords = document.querySelector('#objectsCoords') as HTMLDivElement
+ 
+
     const starSky2 = document.querySelector('#starSky2') as HTMLDivElement
     setInterval(()=> {
         for (let i = 0; i < starSky2.children.length; i++) {
@@ -102,15 +123,27 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
             let left = Math.round(Math.random()*100)
             
             let child= starSky2.children[i]
-            
             child.style.left = `${left + '%'}`
             child.style.top = `${top + '%'}`            
             
+            starSky3.children[i].style.color = 'red';
+            
+            let digit= starSky3.children[i]
+            digit.style.left = `${left + '%'}`
+            digit.style.top = `${top + '%'}`            
+            digit.style.transition = 1+ 's'            
+            digit.innerHTML = `
+            ось Х:${Math.round(left*12.8)+ 'px'} <br>
+            ось Y:${Math.round(top*12.8+47)+ 'px'} <br>
+            <span style="color:white">.</span>
+            `
+            
+            
+            
+            
             let rotate = child.style.rotate
             child.style.rotate = `${180 + 'deg'}`
-
-              
-            
+ 
 
                       
             starSky2.children[i].style.display = 'block'
@@ -124,131 +157,128 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
                 starSky2.children[i].style.transition = 2+'s'
             },2000)
         }
-    }, 5000)
-    
+    }, 2000)
+    //! ИЗМЕНИТЬ ВРЕМЯ НА 5000
     
     //! смена темы шариков
-    const menu = document.querySelector('#menu') as HTMLDivElement
+    // const menu = document.querySelector('#menu') as HTMLDivElement
+    // const comet = document.querySelector('#comet') as HTMLDivElement
     const bubbles = document.querySelector('#bubbles') as HTMLDivElement
     const snowballs = document.querySelector('#snowballs') as HTMLDivElement
     const fireballs = document.querySelector('#fireballs') as HTMLDivElement
-    const comet = document.querySelector('#comet') as HTMLDivElement
-    setInterval(() => {
-        console.log(comet.style.left = 0+'px');
-        
-    }, 500);
+   
 
     bubbles.addEventListener ('click', ()=> {
         for (let i = 0; i < starSky.children.length; i++) {
-        starSky.children[i].style.backgroundColor = 'transparent'
-        starSky2.style.display = 'none'
-        starSky.style.display = 'block'
+            starSky.children[i].style.backgroundColor = 'transparent'
+            starSky2.style.display = 'none'
+            starSky.style.display = 'block'
         }
     })
     snowballs.addEventListener ('click', ()=> {
         for (let i = 0; i < starSky.children.length; i++) {
-        starSky.children[i].style.backgroundColor = 'aliceblue'
-        starSky2.style.display = 'none'
-        starSky.style.display = 'block'
-        }
-    })
-
-    fireballs.addEventListener ('click', ()=> {
-        for (let i = 0; i < starSky2.children.length; i++) {
-        // starSky2.children[i].innerHTML = `${i}`
-        starSky2.style.display = 'block'
-        starSky.style.display = 'none'
+            starSky.children[i].style.backgroundColor = 'aliceblue'
+            starSky2.style.display = 'none'
+            starSky.style.display = 'block'
         }
     })
     
-
+    fireballs.addEventListener ('click', ()=> {
+        for (let i = 0; i < starSky2.children.length; i++) {
+            // starSky2.children[i].innerHTML = `${i}`
+            starSky2.style.display = 'block'
+            starSky.style.display = 'none'
+        }
+    })
+    
+    
  
 
-
-
-
+    
+    
+    
     //! Логотип Windows
-    const aliveEmblem = document.querySelector('#aliveEmblem') as HTMLImageElement
+//     const aliveEmblem = document.querySelector('#aliveEmblem') as HTMLImageElement
      
 
 
-    setTimeout(() => {
-        aliveEmblem.style.transition = 1 + 's' 
-        aliveEmblem.style.opacity = '1' 
-    })
-    setTimeout(() => {
-        aliveEmblem.style.transition = 1 + 's' 
-        aliveEmblem.style.scale = '1.1'
-    }, 1500);
-    setTimeout(() => {
-       aliveEmblem.style.transition = 1 + 's' 
-       aliveEmblem.style.scale = '1'
-}, 2500);
-    setTimeout(() => {
-       aliveEmblem.style.transition = 1 + 's' 
-       aliveEmblem.style.scale = '1.1'
-}, 3500);
-    setTimeout(() => {
-       aliveEmblem.style.transition = 1 + 's' 
-       aliveEmblem.style.scale = '1'
-}, 4500);
-    setTimeout(() => {
-       aliveEmblem.style.transition = 1 + 's' 
-       aliveEmblem.style.scale = '1.1'
-}, 5500);
-    setTimeout(() => {
-       aliveEmblem.style.transition = 1 + 's' 
-       aliveEmblem.style.scale = '1'
-}, 6500);
-    setTimeout(() => {
-       aliveEmblem.style.transition = 6 + 's' 
-       aliveEmblem.style.rotate = 360 + 'deg' 
-}, 7500);
-setTimeout(() => {
-    aliveEmblem.style.transition = 1 + 's' 
-    aliveEmblem.style.opacity = '0' 
-}, 13500);
+//     setTimeout(() => {
+//         aliveEmblem.style.transition = 1 + 's' 
+//         aliveEmblem.style.opacity = '1' 
+//     })
+//     setTimeout(() => {
+//         aliveEmblem.style.transition = 1 + 's' 
+//         aliveEmblem.style.scale = '1.1'
+//     }, 1500);
+//     setTimeout(() => {
+//        aliveEmblem.style.transition = 1 + 's' 
+//        aliveEmblem.style.scale = '1'
+// }, 2500);
+//     setTimeout(() => {
+//        aliveEmblem.style.transition = 1 + 's' 
+//        aliveEmblem.style.scale = '1.1'
+// }, 3500);
+//     setTimeout(() => {
+//        aliveEmblem.style.transition = 1 + 's' 
+//        aliveEmblem.style.scale = '1'
+// }, 4500);
+//     setTimeout(() => {
+//        aliveEmblem.style.transition = 1 + 's' 
+//        aliveEmblem.style.scale = '1.1'
+// }, 5500);
+//     setTimeout(() => {
+//        aliveEmblem.style.transition = 1 + 's' 
+//        aliveEmblem.style.scale = '1'
+// }, 6500);
+//     setTimeout(() => {
+//        aliveEmblem.style.transition = 6 + 's' 
+//        aliveEmblem.style.rotate = 360 + 'deg' 
+// }, 7500);
+// setTimeout(() => {
+//     aliveEmblem.style.transition = 1 + 's' 
+//     aliveEmblem.style.opacity = '0' 
+// }, 13500);
 
 
 
-setInterval(() => {
-    setTimeout(() => {
-        aliveEmblem.style.transition = 1 + 's' 
-        aliveEmblem.style.opacity = '1' 
-     })
-     setTimeout(() => {
-        aliveEmblem.style.transition = 1 + 's' 
-        aliveEmblem.style.scale = '1.1'
- }, 1500);
-     setTimeout(() => {
-        aliveEmblem.style.transition = 1 + 's' 
-        aliveEmblem.style.scale = '1'
- }, 2500);
-     setTimeout(() => {
-        aliveEmblem.style.transition = 1 + 's' 
-        aliveEmblem.style.scale = '1.1'
- }, 3500);
-     setTimeout(() => {
-        aliveEmblem.style.transition = 1 + 's' 
-        aliveEmblem.style.scale = '1'
- }, 4500);
-     setTimeout(() => {
-        aliveEmblem.style.transition = 1 + 's' 
-        aliveEmblem.style.scale = '1.1'
- }, 5500);
-     setTimeout(() => {
-        aliveEmblem.style.transition = 1 + 's' 
-        aliveEmblem.style.scale = '1'
- }, 6500);
-     setTimeout(() => {
-        aliveEmblem.style.transition = 6 + 's' 
-        aliveEmblem.style.rotate = 360 + 'deg' 
- }, 7500);
- setTimeout(() => {
-     aliveEmblem.style.transition = 1 + 's' 
-     aliveEmblem.style.opacity = '0' 
- }, 13500);
-}, 15000);
+// setInterval(() => {
+//     setTimeout(() => {
+//         aliveEmblem.style.transition = 1 + 's' 
+//         aliveEmblem.style.opacity = '1' 
+//      })
+//      setTimeout(() => {
+//         aliveEmblem.style.transition = 1 + 's' 
+//         aliveEmblem.style.scale = '1.1'
+//  }, 1500);
+//      setTimeout(() => {
+//         aliveEmblem.style.transition = 1 + 's' 
+//         aliveEmblem.style.scale = '1'
+//  }, 2500);
+//      setTimeout(() => {
+//         aliveEmblem.style.transition = 1 + 's' 
+//         aliveEmblem.style.scale = '1.1'
+//  }, 3500);
+//      setTimeout(() => {
+//         aliveEmblem.style.transition = 1 + 's' 
+//         aliveEmblem.style.scale = '1'
+//  }, 4500);
+//      setTimeout(() => {
+//         aliveEmblem.style.transition = 1 + 's' 
+//         aliveEmblem.style.scale = '1.1'
+//  }, 5500);
+//      setTimeout(() => {
+//         aliveEmblem.style.transition = 1 + 's' 
+//         aliveEmblem.style.scale = '1'
+//  }, 6500);
+//      setTimeout(() => {
+//         aliveEmblem.style.transition = 6 + 's' 
+//         aliveEmblem.style.rotate = 360 + 'deg' 
+//  }, 7500);
+//  setTimeout(() => {
+//      aliveEmblem.style.transition = 1 + 's' 
+//      aliveEmblem.style.opacity = '0' 
+//  }, 13500);
+// }, 15000);
 
 
 
@@ -263,7 +293,7 @@ setInterval(() => {
 
 
     const api = ('https://www.ozon.ru/category/smartfony-15502/')
-    console.log(api);
+    // console.log(api);
     
     // const api2 = ('https://avatars.githubusercontent.com/u/126806058?v=4')
 
@@ -285,7 +315,8 @@ setInterval(() => {
         `
         
     }
-    mobile()
+
+    //!!!!!!!!!!!!!!!!!!!!!!открыть) mobile()
     
    
     

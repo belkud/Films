@@ -64,7 +64,7 @@ body {
 
 
 /*! Двигающиеся шарики по экрану*/
- #starSky, #starSky2 {
+ #starSky, #starSky2, #starSky3 {
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -72,7 +72,9 @@ body {
   display: none;
 }
 
-#starSky2 {
+/*!!!!!!!!!!!!!!!!!!!11включить дисплей  #starSky2,  */
+
+#starSky3 {
   display: block;
 }
 
@@ -91,9 +93,22 @@ body {
 
 #starSky2>div {
   position: absolute;
-  display: none;
-  /* backface-visibility: hidden;
-  will-change:auto; */
+  display: block;
+ 
+}
+#starSky3>div {
+  position: absolute;
+  /* color: aliceblue; */
+  display: block;
+  /* border: 1px solid red; */
+  min-width: 100px !important;
+ 
+}
+.whitePoint {
+  color: aliceblue;
+  width: 10px;
+  height: 10px;
+  border: 2px solid red;
 }
 
 
