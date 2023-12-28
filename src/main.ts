@@ -128,12 +128,18 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
             let digit= starSky3.children[i]
             digit.style.left = `${left + '%'}`
             digit.style.top = `${top + '%'}`            
-            digit.style.transition = 1+ 's'            
+            digit.style.transition = 2+ 's'   
+            
+            let x = (getComputedStyle(document.body).width)
+            let y = (getComputedStyle(document.body).height)
+      
+                
             digit.innerHTML = `
-            ось Х:${Math.round(left*12.8)+ 'px'} <br>
-            ось Y:${Math.round(top*12.8+47)+ 'px'} <br>
+            ось Х:${Math.round(parseInt(x)*left/100)+ 'px'} <br>
+            ось Y:${Math.round(parseInt(y)*top/100+47)+ 'px'} <br>
             <span style="color:white">.</span>
             `
+            
             
             
             
@@ -156,8 +162,18 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
         }
     }, 5000)
     
+
+    console.log(getComputedStyle(document.body).width);
+    
+
+    const menu = document.querySelector ('#menu') as HTMLDivElement
+    window.addEventListener ('resize', ()=> {
+      let computedStyle = getComputedStyle(document.body)
+      menu.innerHTML = 'ширина экрана ' + computedStyle.width   
+    })
+
+
     //! смена темы шариков
-    // const menu = document.querySelector('#menu') as HTMLDivElement
     // const comet = document.querySelector('#comet') as HTMLDivElement
     const bubbles = document.querySelector('#bubbles') as HTMLDivElement
     const snowballs = document.querySelector('#snowballs') as HTMLDivElement
