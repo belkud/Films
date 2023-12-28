@@ -74,10 +74,6 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
 
 
 
-
-
-
-
     setInterval(()=> {
         for (let i = 0; i < starSky.children.length; i++) {
             
