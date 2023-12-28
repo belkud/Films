@@ -106,9 +106,9 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
 
  
 
-//! starSky2 - огненные шары, starSky3 - вычисленние координат
+//! starSky2 - огненные шары, starSky3 - вычисление координат
    const starSky3 = document.querySelector('#starSky3') as HTMLDivElement
-   const objectsCoords = document.querySelector('#objectsCoords') as HTMLDivElement
+  
  
 
     const starSky2 = document.querySelector('#starSky2') as HTMLDivElement
@@ -118,33 +118,45 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
             let top = Math.round(Math.random()*100)
             let left = Math.round(Math.random()*100)
             
+            // координаты шаров
             let child= starSky2.children[i]
             child.style.left = `${left + '%'}`
             child.style.top = `${top + '%'}`            
             
             
-            
-            
+            // координаты самих координат
             let digit= starSky3.children[i]
             digit.style.left = `${left + '%'}`
             digit.style.top = `${top + '%'}`            
             digit.style.transition = 2+ 's'   
             
-            let x = (getComputedStyle(document.body).width)
-            let y = (getComputedStyle(document.body).height)
-      
-                
+            let x = parseInt(getComputedStyle(document.body).width)
+            let y = parseInt(getComputedStyle(document.body).height)
+            
             digit.innerHTML = `
-            ось Х:${Math.round(parseInt(x)*left/100)+ 'px'} <br>
-            ось Y:${Math.round(parseInt(y)*top/100+47)+ 'px'} <br>
+            ось Х:${Math.round(x*left/100)+ 'px'} <br>
+            ось Y:${Math.round(y*top/100+47)+ 'px'} <br>
             <span style="color:white">.</span>
             `
+
+            // let score =0
+            // setInterval( ()=>{
+                // score+=1
+                // console.log(score);
+                
+                // for (let i=0; i<=x; i++) {
+            //         moveLines[i].innerHTML = `${score}`
+            //         let num = massiveNum[i]
+                    
+            //     if (moveLines[i].innerHTML>=num) {
+            //          moveLines[i].innerHTML=num
+            //     }
+            //   }    
+            // },60)
+
+
             
-            
-            
-            
-            
-            let rotate = child.style.rotate
+        
             child.style.rotate = `${180 + 'deg'}`
  
 
@@ -163,22 +175,19 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     }, 5000)
     
 
-    console.log(getComputedStyle(document.body).width);
+
+    
     
 
-    const menu = document.querySelector ('#menu') as HTMLDivElement
-    window.addEventListener ('resize', ()=> {
-      let computedStyle = getComputedStyle(document.body)
-      menu.innerHTML = 'ширина экрана ' + computedStyle.width   
-    })
+    
 
 
     //! смена темы шариков
-    // const comet = document.querySelector('#comet') as HTMLDivElement
+
     const bubbles = document.querySelector('#bubbles') as HTMLDivElement
     const snowballs = document.querySelector('#snowballs') as HTMLDivElement
     const fireballs = document.querySelector('#fireballs') as HTMLDivElement
-   
+    const objectsCoords = document.querySelector('#objectsCoords') as HTMLDivElement
 
     bubbles.addEventListener ('click', ()=> {
         for (let i = 0; i < starSky.children.length; i++) {
