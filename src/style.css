@@ -103,6 +103,16 @@ body {
   animation-fill-mode: forwards;
   /* opacity: .8; */
 }
+/* @keyframes moveComet {
+  from {
+    transform: translateX(90%);
+    transform: translateY(25%);
+  }
+  to {
+    transform: translateX(45%);
+    transform: translateY(80%);
+  } 
+} */
 @keyframes moveComet {
   from {
     left: 110%;
@@ -111,8 +121,7 @@ body {
   to {
     left: -45%;
     top: 80%;
-  }
-  
+  } 
 }
 
 
@@ -149,6 +158,6 @@ body {
 @media screen and (max-width:360px) {
   #comet {
     rotate: 15deg;
-    animation-timing-function: 5s;
+    animation-timing-function: 2.5s;
   }
 }

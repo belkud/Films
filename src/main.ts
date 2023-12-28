@@ -133,7 +133,10 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     const snowballs = document.querySelector('#snowballs') as HTMLDivElement
     const fireballs = document.querySelector('#fireballs') as HTMLDivElement
     const comet = document.querySelector('#comet') as HTMLDivElement
-    
+    setInterval(() => {
+        console.log(comet.style.left = 0+'pxz');
+        
+    }, 500);
 
     bubbles.addEventListener ('click', ()=> {
         for (let i = 0; i < starSky.children.length; i++) {
