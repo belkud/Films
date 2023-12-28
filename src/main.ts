@@ -47,12 +47,12 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
         let deg = 0
              setInterval(() => {
          deg+=360
-         firstLine.style.rotate =`${deg + 'deg'}`
-         firstLine.style.transition = 3+'s'
-         secondLine.style.rotate =`${deg + 'deg'}`
-         secondLine.style.transition = 6+'s'
-         thirdLine.style.rotate =`${deg + 'deg'}`
-         thirdLine.style.transition = 9+'s'
+        //  firstLine.style.rotate =`${deg + 'deg'}`
+        //  firstLine.style.transition = 3+'s'
+        //  secondLine.style.rotate =`${deg + 'deg'}`
+        //  secondLine.style.transition = 6+'s'
+        //  thirdLine.style.rotate =`${deg + 'deg'}`
+        //  thirdLine.style.transition = 9+'s'
         }, 12000);
         
    
@@ -111,7 +111,6 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
 
               
             
-console.log(rotate);
 
                       
             starSky2.children[i].style.display = 'block'
@@ -133,7 +132,8 @@ console.log(rotate);
     const bubbles = document.querySelector('#bubbles') as HTMLDivElement
     const snowballs = document.querySelector('#snowballs') as HTMLDivElement
     const fireballs = document.querySelector('#fireballs') as HTMLDivElement
- 
+    const comet = document.querySelector('#comet') as HTMLDivElement
+    
 
     bubbles.addEventListener ('click', ()=> {
         for (let i = 0; i < starSky.children.length; i++) {
@@ -158,7 +158,12 @@ console.log(rotate);
         }
     })
     
-    
+
+ 
+
+
+
+
     //! Логотип Windows
     const aliveEmblem = document.querySelector('#aliveEmblem') as HTMLImageElement
      
