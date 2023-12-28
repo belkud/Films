@@ -126,7 +126,8 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
             child.style.left = `${left + '%'}`
             child.style.top = `${top + '%'}`            
             
-            starSky3.children[i].style.color = 'red';
+            
+            
             
             let digit= starSky3.children[i]
             digit.style.left = `${left + '%'}`
@@ -157,8 +158,7 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
                 starSky2.children[i].style.transition = 2+'s'
             },2000)
         }
-    }, 2000)
-    //! ИЗМЕНИТЬ ВРЕМЯ НА 5000
+    }, 5000)
     
     //! смена темы шариков
     // const menu = document.querySelector('#menu') as HTMLDivElement
@@ -171,6 +171,7 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     bubbles.addEventListener ('click', ()=> {
         for (let i = 0; i < starSky.children.length; i++) {
             starSky.children[i].style.backgroundColor = 'transparent'
+            starSky3.style.display = 'none'
             starSky2.style.display = 'none'
             starSky.style.display = 'block'
         }
@@ -178,17 +179,24 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     snowballs.addEventListener ('click', ()=> {
         for (let i = 0; i < starSky.children.length; i++) {
             starSky.children[i].style.backgroundColor = 'aliceblue'
+            starSky3.style.display = 'none'
             starSky2.style.display = 'none'
             starSky.style.display = 'block'
         }
     })
     
     fireballs.addEventListener ('click', ()=> {
-        for (let i = 0; i < starSky2.children.length; i++) {
-            // starSky2.children[i].innerHTML = `${i}`
             starSky2.style.display = 'block'
+            starSky3.style.display = 'none'
             starSky.style.display = 'none'
-        }
+    })
+
+    objectsCoords.addEventListener ('click', ()=> {
+ 
+            starSky3.style.display = 'block'
+            starSky2.style.display = 'none'
+            starSky.style.display = 'none'
+  
     })
     
     

@@ -72,9 +72,9 @@ body {
   display: none;
 }
 
-/*!!!!!!!!!!!!!!!!!!!11включить дисплей  #starSky2,  */
 
-#starSky3 {
+
+#starSky2 {
   display: block;
 }
 
@@ -98,18 +98,12 @@ body {
 }
 #starSky3>div {
   position: absolute;
-  /* color: aliceblue; */
+  color: aqua;
   display: block;
-  /* border: 1px solid red; */
   min-width: 100px !important;
  
 }
-.whitePoint {
-  color: aliceblue;
-  width: 10px;
-  height: 10px;
-  border: 2px solid red;
-}
+
 
 
 #comet {
@@ -172,14 +166,24 @@ body {
   display: none; 
 } 
 
-
 #menu li ul li:hover{
   background-color: rgb(211, 211, 211, .3);
   width: 180px;
 }
+
+
+
+
+
 @media screen and (max-width:400px) {
   #comet {
     rotate: 15deg;
     animation-duration: 1.2s;
   }
+  #starSky3>div {
+    font-size: .8em;
+  }
+
+
+
 }
