@@ -99,9 +99,11 @@ body {
   position: absolute;
   filter:drop-shadow(0px 0px 15px aliceblue);
   rotate: 30deg;
-  animation: moveComet 10s infinite forwards 4s;
+  animation: moveComet 10s infinite forwards ;
   animation-fill-mode: forwards;
-  /* opacity: .8; */
+  opacity: .8;
+  animation-iteration-count: 3;
+  animation-delay: 3s;
 }
 /* @keyframes moveComet {
   from {
@@ -155,9 +157,9 @@ body {
   background-color: rgb(211, 211, 211, .3);
   width: 180px;
 }
-@media screen and (max-width:360px) {
+@media screen and (max-width:400px) {
   #comet {
     rotate: 15deg;
-    animation-timing-function: 1s;
+    animation-duration: 1s;
   }
 }
