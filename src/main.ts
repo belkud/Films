@@ -134,7 +134,7 @@ const thirdLine = document.querySelector('#thirdLine') as HTMLDivElement
     const fireballs = document.querySelector('#fireballs') as HTMLDivElement
     const comet = document.querySelector('#comet') as HTMLDivElement
     setInterval(() => {
-        console.log(comet.style.left = 0+'pxz');
+        console.log(comet.style.left = 0+'px');
         
     }, 500);
 

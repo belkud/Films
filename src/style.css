@@ -158,6 +158,6 @@ body {
 @media screen and (max-width:360px) {
   #comet {
     rotate: 15deg;
-    animation-timing-function: 2.5s;
+    animation-timing-function: 1s;
   }
 }
