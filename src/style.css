@@ -97,9 +97,10 @@ body {
 
 #comet {
   position: absolute;
+  top: -10%;
   filter:drop-shadow(0px 0px 15px aliceblue);
   rotate: 30deg;
-  animation: moveComet 6s infinite forwards ;
+  animation: moveComet 4s linear  forwards ;
   animation-fill-mode: forwards;
   opacity: .8;
   animation-iteration-count: 3;
